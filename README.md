@@ -1,6 +1,5 @@
 #README
-
-##Tweeetsテーブル
+## Tweeetsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|foreign_key: true|
@@ -33,7 +32,7 @@
 
 
 ##Association(Tweets)
-・belongs_to :Users
+- belongs_to :Users
 ・belongs_to :group
 
 ##Association(Users)
