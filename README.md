@@ -33,7 +33,7 @@
 
 ## Association(Tweets)
 - belongs_to :Users
-・belongs_to :group
+- belongs_to :group
 
 ## Association(Users)
 ・has_many:Tweets
