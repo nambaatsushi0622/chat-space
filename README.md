@@ -36,16 +36,16 @@
 - belongs_to :group
 
 ## Association(Users)
-・has_many:Tweets
-・has_many:Group_users
-・has_many :Group, through: :Group_users
+- has_many:Tweets
+- has_many:Group_users
+- has_many :Group, through: :Group_users
 
 ## Association(Group_Users)
-・belongs_to :Users
-・belongs_to :group
+- belongs_to :Users
+- belongs_to :group
 
 ## Association(Group)
-・has_many:Tweets
-・has_many:Users
-・has_many :Users, through: :Group_users
+- has_many:Tweets
+- has_many:Users
+- has_many :Users, through: :Group_users
 
