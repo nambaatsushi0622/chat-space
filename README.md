@@ -2,10 +2,10 @@
 ## Messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
 |text|string||
 |image|string||
-|group_id|integer|foreign_key: true|
+|group_id|references|foreign_key: true|
 
 
 ## Usersテーブル
@@ -19,15 +19,15 @@
 ## Group_Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index: true, foreign_key: true|
-|group_id|integer|index: true, foreign_key: true|
+|user_id|references|index: true, foreign_key: true|
+|group_id|references|index: true, foreign_key: true|
 
 
 ## Groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|index: true, foreign_key: true|
-|group_name|integer|index: true|
+|group_id|integer|index: true, primary_key|
+|name|integer|index: true|
 
 
 
@@ -44,8 +44,4 @@
 - belongs_to :User
 - belongs_to :group
 
-## Association(Group)
-- has_many:Messages
-- has_many:Users
-- has_many :Users, through: :Group_users
 
