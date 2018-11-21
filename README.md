@@ -13,7 +13,6 @@
 |------|----|-------|
 |name|VARCHAR(25)|index: true,null: false, unique: true|
 |Email|VARCHAR(25)|null: false, unique: true|
-|password|VARCHAR(25)|null: false|
 
 
 ## Group_Usersテーブル
@@ -26,7 +25,7 @@
 ## Groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|index: true, primary_key|
+|group_id|integer|index: true|
 |name|integer|index: true|
 
 
