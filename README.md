@@ -43,4 +43,8 @@
 - belongs_to :User
 - belongs_to :group
 
+## Association(Group)
+- has_many:Messages
+- has_many:Group_users
+- has_many :Users, through: :Group_users
 
