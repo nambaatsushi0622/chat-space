@@ -1,0 +1,75 @@
+.chat {
+ height: 100%;
+
+ .chat-side {
+  float: left;
+  width: 300px;
+  height: 700px;
+  background-color: #2f3e51;
+
+  .chat-user.clearfix:after {
+   height: 100px;
+   padding: 20px;
+   color: #fff;
+   background-color: #253141;
+   content: '';
+   display: block;
+   clear: both;
+
+    h5 {
+    float: left;
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin: 0;
+    }
+
+    .chat-user__actions{
+    float: right;
+   }
+  }
+ }
+}
+
+
+
+//要素
+// @mixin clearfix::after {
+//     content: "";
+//     clear: both;
+//     display: table;
+// }
+// // html {
+// height: 100%;
+
+//   body {
+//   margin: 0;
+//   display: flex;
+//   flex-direction: column;
+//   font-family: "Hiragino Sans", "HelveticaNeue-Light",
+//    "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial, sans-serif;
+//   color: #434a54;
+
+//    .layput {
+//    flex: 1;
+//     .chat {
+//     min-width: 980px;
+//     height: 100%;
+//      p {
+//       font-color:red;
+//      }
+//     }
+//    }
+//   }
+// }
+// // .chat {
+// //   //要素が100pxより小さくならない（100px以上）という意味
+// //   min-width: 980px;
+// //   height: 100%;
+// //     .chat--side{
+// //     float: left;
+// //     width: 300px;
+// //     height: 100%;
+// //     background-color: #2f3e51;
+// //     }
+// // }
