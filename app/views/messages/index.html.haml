@@ -1,9 +1,25 @@
 .chat
   .chat-side
     .chat-user.clearfix
-      %h5 難波
+      %h5 難波　篤
       .chat-user__actions
-
-
-
-
+        %a{:href => 'http://google.co.jp', :class=> 'chat-user_action' }
+          %i.fa.fa-pencil-square-o
+        %a{:href => 'http://google.co.jp', :class=> 'chat-user_action' }
+          %i.fa.fa-cog
+    %ul.chat-groups
+      %li.chat-group
+        %a{:href => 'http://google.co.jp', :class=> 'chat-group__link' }
+          %p(class="chat-group__name") 難波
+          %p(class="chat-group__message") よろしくです
+  .chat-main
+    .chat-header.clearfix
+      .chat-header--left
+        %h2 ばバッバああああ
+        %p.chat-header__users
+          %span.chat-header__userss 難波　篤
+      .chat-header--right
+        %a{:href => 'http://google.co.jp', :class=> 'chat-header__edit-btn' } Edit
+    .chat-body
+      %ul.chat-messages
+        %li.chat-message aa

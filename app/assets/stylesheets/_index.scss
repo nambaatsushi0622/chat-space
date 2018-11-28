@@ -1,75 +1,147 @@
 .chat {
- height: 100%;
+margin: 0;
+height: 100%;
+font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial, sans-serif;
 
- .chat-side {
+  .chat-side {
   float: left;
   width: 300px;
   height: 700px;
   background-color: #2f3e51;
 
-  .chat-user.clearfix:after {
+   .chat-user {
+   box-sizing: border-box;
    height: 100px;
    padding: 20px;
    color: #fff;
    background-color: #253141;
-   content: '';
-   display: block;
-   clear: both;
-
-    h5 {
-    float: left;
-    line-height: 60px;
-    letter-spacing: 2px;
-    font-size: 16px;
-    margin: 0;
-    }
-
-    .chat-user__actions{
-    float: right;
    }
   }
- }
+}
+
+.chat-user h5 {
+float: left;
+line-height: 60px;
+letter-spacing: 2px;
+font-size: 16px;
+}
+
+.chat-user__actions {
+float: right;
+}
+
+.chat-user__actions a {
+display: inline-block;;
+margin: 15px 0 15px 3px;
+line-height: 28px;
+color: #fff;
+font-size: 20px;
+}
+
+.chat-groups {
+margin: 0;
+padding: 0;
+color: #fff;
+list-style: none;
+}
+
+.chat-group {
+box-sizing: border-box;
+display: list-item;
+}
+
+.chat-group__link {
+display: block;
+color: #fff;
+padding: 20px 20px;
+}
+
+.chat-group__name {
+display: inline-block;
+font-size: 15px;
+margin-bottom: 5px;
+}
+.chat-group__message {
+font-size: 11px;
+}
+
+.chat-main {
+float: left;
+position: relative;
+width: calc(100% - 300px);
+height: 700px;
+}
+
+.chat-header {
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: #fff;
+  border-bottom:  1px solid #eee;
+  height: 100px;
+}
+
+.chat-header--left {
+float: left;
+}
+
+.chat-header--left h2 {
+margin-top: 20px;
+line-height: 50px;
+letter-spacing: 2px;
+color: #333;
+font-size: 20px;
+font-weight: 400;
+}
+
+.chat-header__users {
+line-height: 20px;
+color: #999;
+font-size: 12px;
+}
+
+.chat-header__userss {
+margin-left: 3px;
+}
+
+.chat-header--right {
+float: right;
+
+}
+.chat-header__edit-btn {
+display: inline-block;
+margin: 28px 0;
+padding-right:  20px;
+padding-left: 20px;
+line-height: 40px;
+color:  #38aef0;
+font-size: 14px;
+border: 2px solid;
+}
+.chat-body {
+position: relative;
+padding: 30px 0;
+height: calc(700px - 190px);
+overflow-y: scroll;
+}
+.chat-messages {
+  position: absolute;
+  right: 40px;
+  left:40px;
+  padding: 0;
+  list-style: none;
+}
+.chat-message {
+  margin-bottom: 40px;
 }
 
 
 
-//要素
-// @mixin clearfix::after {
-//     content: "";
-//     clear: both;
-//     display: table;
-// }
-// // html {
-// height: 100%;
 
-//   body {
-//   margin: 0;
-//   display: flex;
-//   flex-direction: column;
-//   font-family: "Hiragino Sans", "HelveticaNeue-Light",
-//    "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial, sans-serif;
-//   color: #434a54;
 
-//    .layput {
-//    flex: 1;
-//     .chat {
-//     min-width: 980px;
-//     height: 100%;
-//      p {
-//       font-color:red;
-//      }
-//     }
-//    }
-//   }
-// }
-// // .chat {
-// //   //要素が100pxより小さくならない（100px以上）という意味
-// //   min-width: 980px;
-// //   height: 100%;
-// //     .chat--side{
-// //     float: left;
-// //     width: 300px;
-// //     height: 100%;
-// //     background-color: #2f3e51;
-// //     }
-// // }
+
+// 要素の定義
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
