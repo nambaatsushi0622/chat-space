@@ -6,7 +6,7 @@ font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "He
   .chat-side {
   float: left;
   width: 300px;
-  height: 700px;
+  height: 100vh;
   background-color: #2f3e51;
 
    .chat-user {
@@ -136,12 +136,13 @@ overflow-y: scroll;
 
 
 
-
-
-
 // 要素の定義
 .clearfix {
   content: '';
   display: block;
   clear: both;
+}
+a {
+text-decoration: none;
+
 }
