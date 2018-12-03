@@ -7,11 +7,12 @@
           %i.fa.fa-pencil-square-o
         %a{:href => 'http://google.co.jp', :class=> 'chat-user_action' }
           %i.fa.fa-cog
-    %ul.chat-groups
-      %li.chat-group
-        %a{:href => 'http://google.co.jp', :class => 'chat-group__link' }
-          %p(class="chat-group__name") 難波　
-          %p(class="chat-group__message") 井上
+    = render partial: "index"
+    / %ul.chat-groups
+    /   %li.chat-group
+    /     %a{:href => 'http://google.co.jp', :class => 'chat-group__link' }
+    /       %p(class="chat-group__name") 難波　
+    /       %p(class="chat-group__message") 井上
   .chat-main
     .chat-header.clearfix
       .chat-header--left
@@ -21,16 +22,17 @@
       .chat-header--right
         %a{:href => 'http://google.co.jp', :class=> 'chat-header__edit-btn' } Edit
     .chat-body
-      %ul.chat-messages
-        %li.chat-message
-          .chat-message__header.clearfix
-            %p.chat-message_name 中の
-            %p.chat-message_time 2018/11/25 03:44:28
-          %p.chat-message_body  難波　篤
+      = render partial: "index2"
+      / %ul.chat-messages
+      /   %li.chat-message
+      /     .chat-message__header.clearfix
+      /       %p.chat-message_name 難波　篤
+      /       %p.chat-message_time 2018/11/25 03:44:28
+      /   %p.chat-message_body  難波　篤
     .chat-footer
       %form{:href => "http://google.co.jp", :class => "new_message", :method => "post"}
         .chat-footer__body
-          %textarea{:row => '1',:placeholder => 'type a meaasge',:name => 'message[body]'}
+          %textarea{:row => '1',:placeholder => 'type a message',:name => 'message[body]'}
           %label.chat-footer__title
             %input{:type => 'file',:name => 'message[image]',:id => 'message_image'}
             %i.fa.fa-image
