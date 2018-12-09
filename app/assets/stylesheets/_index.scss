@@ -23,21 +23,24 @@ font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "He
      font-size: 16px;
      font-color:#FFFFFF;
      }
+
+     .chat-user__actions {
+     float: right;
+
+      & a {
+      display: inline-block;;
+      margin: 15px 0 15px 3px;
+      line-height: 28px;
+      color: #fff;
+      font-size: 20px;
+
+        }
+       }
    }
   }
 }
 
-.chat-user__actions {
-float: right;
 
-  a {
-  display: inline-block;;
-  margin: 15px 0 15px 3px;
-  line-height: 28px;
-  color: #fff;
-  font-size: 20px;
-  }
-}
 
 .chat-groups {
 margin: 0;
@@ -48,22 +51,23 @@ list-style: none;
  .chat-group {
  box-sizing: border-box;
  display: list-item;
+
+  &__link {
+  display: block;
+  color: #fff;
+  padding: 20px 20px;
+
+   &__name {
+   display: inline-block;
+   font-size: 15px;
+
+   }
+  }
  }
 }
 
-.chat-group__link {
-display: block;
-color: #fff;
-padding: 20px 20px;
-}
-
-.chat-group__name {
-display: inline-block;
-font-size: 15px;
-margin-bottom: 5px;
-}
-
 .chat-group__message {
+margin-top: 5px;
 font-size: 11px;
 }
 
@@ -80,18 +84,19 @@ height: 700px;
   background-color: #fff;
   border-bottom:  1px solid #eee;
   height: 100px;
-}
 
-.chat-header--left {
-float: left;
+  &--left {
+   float: left;
 
- h2 {
- margin-top: 20px;
- line-height: 50px;
- letter-spacing: 2px;
- color: #333;
- font-size: 20px;
- font-weight: 400;
+    h2 {
+    margin-top: 20px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+
+  }
  }
 }
 
@@ -135,9 +140,7 @@ background-color: #AAAAAA;
   padding: 0;
   list-style: none;
 }
-// .chat-message {
-//   margin-bottom: 40px;
-// }
+
 .chat-message__header {
 height: 20px;
 margin-bottom: 10px;
@@ -234,7 +237,7 @@ font-size: inherit;
 
 
 
-// 要素の定義
+// 定義
 .clearfix {
   content: '';
   display: block;
