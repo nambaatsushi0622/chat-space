@@ -15,17 +15,17 @@
         %p.chat-header__users
           %span.chat-header__userss Members:  難波　篤
       .chat-header--right
-        %a{:href => 'http://google.co.jp', :class=> 'chat-header__edit-btn' } Edit
+        %a{:href => 'http://google.co.jp', :class=> 'chat-header--right__edit-btn' } Edit
     .chat-body
       = render partial: "index2"
     .chat-footer
       %form{:href => "http://google.co.jp", :class => "new_message", :method => "post"}
         .chat-footer__body
           %textarea{:row => '1',:placeholder => 'type a message',:name => 'message[body]'}
-          %label.chat-footer__title
+          %label.chat-footer__body__title
             %input{:type => 'file',:name => 'message[image]',:id => 'message_image'}
             %i.fa.fa-image
-      %input{:tyep => "submit",:name => "commit",:value => "Send"}
+      %input.chat-footer__input{:tyep => "submit",:name => "commit",:value => "Send"}
 
 
 
