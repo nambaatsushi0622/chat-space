@@ -3,9 +3,9 @@
     .chat-user.clearfix
       %h5 難波　篤
       .chat-user__actions
-        %a{:href => 'http://google.co.jp', :class=> 'chat-user_action' }
+        = link_to "http://google.co.jp", class:"chat-user_action" do
           %i.fa.fa-pencil-square-o
-        %a{:href => 'http://google.co.jp', :class=> 'chat-user_action' }
+        = link_to "http://google.co.jp", class:"chat-user_action" do
           %i.fa.fa-cog
     = render partial: "index"
   .chat-main
@@ -15,7 +15,7 @@
         %p.chat-header__users
           %span.chat-header__userss Members:  難波　篤
       .chat-header--right
-        %a{:href => 'http://google.co.jp', :class=> 'chat-header--right__edit-btn' } Edit
+        = link_to "Edit", "http://google.co.jp", class:"chat-header--right__edit-btn"
     .chat-body
       = render partial: "index2"
     .chat-footer
@@ -26,8 +26,3 @@
             %input{:type => 'file',:name => 'message[image]',:id => 'message_image'}
             %i.fa.fa-image
       %input.chat-footer__input{:tyep => "submit",:name => "commit",:value => "Send"}
-
-
-
-
-
