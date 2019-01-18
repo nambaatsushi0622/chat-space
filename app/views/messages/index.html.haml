@@ -1,0 +1,28 @@
+.chat
+  .chat-side
+    .chat-user.clearfix
+      %h5 難波　篤
+      .chat-user__actions
+        = link_to "http://google.co.jp", class:"chat-user_action" do
+          %i.fa.fa-pencil-square-o
+        = link_to "http://google.co.jp", class:"chat-user_action" do
+          %i.fa.fa-cog
+    = render partial: "index"
+  .chat-main
+    .chat-header.clearfix
+      .chat-header--left
+        %h2 ばバッバああああ
+        %p.chat-header__users
+          %span.chat-header__userss Members:  難波　篤
+      .chat-header--right
+        = link_to "Edit", "http://google.co.jp", class:"chat-header--right__edit-btn"
+    .chat-body
+      = render partial: "index2"
+    .chat-footer
+      %form{:href => "http://google.co.jp", :class => "new_message", :method => "post"}
+        .chat-footer__body
+          %textarea{:row => '1',:placeholder => 'type a message',:name => 'message[body]'}
+          %label.chat-footer__body__title
+            %input{:type => 'file',:name => 'message[image]',:id => 'message_image'}
+            %i.fa.fa-image
+      %input.chat-footer__input{:tyep => "submit",:name => "commit",:value => "Send"}
